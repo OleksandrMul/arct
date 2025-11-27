@@ -1,2 +1,0 @@
-# arct
-ARCT
