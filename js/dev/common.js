@@ -14,6 +14,15 @@ const isMobile = { Android: function() {
 function addTouchAttr() {
   if (isMobile.any()) document.documentElement.setAttribute("data-fls-touch", "");
 }
+function addLoadedAttr() {
+  if (!document.documentElement.hasAttribute("data-fls-preloader-loading")) {
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.documentElement.setAttribute("data-fls-loaded", "");
+      }, 0);
+    });
+  }
+}
 function getHash() {
   if (location.hash) {
     return location.hash.replace("#", "");
@@ -199,6 +208,7 @@ function truncateText(selector, maxLength = 120) {
   });
 }
 addTouchAttr();
+addLoadedAttr();
 document.addEventListener("DOMContentLoaded", () => {
   truncateText(".item-blog-post__text p", 94);
 });
