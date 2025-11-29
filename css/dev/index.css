@@ -1600,6 +1600,7 @@ textarea {
   transition: all 0.8s 0.3s;
   font-family: "Prata", serif;
   color: #dedede;
+  background-color: #fff;
 }
 /* Блок з елементами */
 .fls-preloader__body {
