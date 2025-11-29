@@ -2811,7 +2811,7 @@ html:not([data-fls-touch]) .blog-posts__items:has(.item-blog:hover) .item-blog:n
   .menu__body {
     position: fixed;
     width: 100%;
-    height: 100svh;
+    height: 100dvh;
     right: -100%;
     top: 0;
     overflow: auto;
